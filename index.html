@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Test</title>
+</head>
+<body>
+
+<div style="width: 800px; margin: 0 auto;">
+    <h2 id="title">Title</h2>
+    <div id="body">Body</div>
+
+</div>
+
+<script src="dist/index.js"></script>
+<script>
+    var tinaConfig = {
+        fields: [
+            {
+                name: 'title',
+                label: 'Title',
+                component: 'text',
+                selector: '#title'
+            },
+            {
+                name: 'body',
+                label: 'Body',
+                component: 'markdown',
+                selector: '#body'
+            }
+        ],
+        repo: 'mitchmac/tina-anywhere-data',
+        repoContentFile: 'index.md'
+    };
+    tinaInit(tinaConfig);
+</script>
+</body>
+</html>
